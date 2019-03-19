@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Список сотрудников
+{% endblock %}
+
+{% block content %}
+  {% for employee in employees %}
+  <div class="card">
+    <div class="card-header">
+      <h5>Пользователь: {{ employee.user.username }}</h5>
+    </div>
+    <div class="card-body">
+      <p>Имя: {{ employee.user.first_name }}</p>
+      <p>Фамилия: {{ employee.user.last_name }}</p>
+      <p>Email: {{ employee.user.email }}</p>
+    </div>
+      <img src="{{ employee.avatar.url }}" id="avatars-list">
+  </div>
+
+
+
+  {% endfor %}
+{% endblock %}

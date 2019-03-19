@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Редактирование
+{% endblock %}
+
+{% block content %}
+  <form action="{% url 'profile_update_url' pk=profile.pk %}" method="post">
+      {% csrf_token %}
+
+      {{ form.as_p }}
+      <button type="submit" name="button">Отправить</button>
+  </form>
+{% endblock %}

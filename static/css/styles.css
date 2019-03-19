@@ -1,0 +1,27 @@
+body {
+  background-color: grey;
+}
+
+.card {
+  display: inline-block;
+  margin-bottom: 25px;
+}
+
+.card-body {
+  float: right;
+  padding-left: 50px;
+  width: 300px;
+}
+
+.edit-avatar {
+  margin-top: 15px;
+}
+
+#avatars-list {
+   width: 125px;
+   height: 160px;
+}
+
+.card-header {
+  height: 45px;
+}
