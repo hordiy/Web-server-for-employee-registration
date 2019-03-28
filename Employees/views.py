@@ -27,7 +27,7 @@ class EmployeeProfile(View):
 
         if bound_form.is_valid():
             new_avatar = bound_form.save()
-            return redirect('/employees/')
+            return redirect('/')
         return render(request, 'Employees/employee_profile.html', context={'form': bound_form ,'employee': employee, 'avatar': avatar})
 
 class ProfileUpdate(View):
@@ -42,5 +42,5 @@ class ProfileUpdate(View):
 
         if bound_form.is_valid():
             new_profile = bound_form.save()
-            return redirect('/employees/')
+            return redirect('/')
         return render(request, 'Employees/employee_profile_update.html', context={'form': bound_form, 'profile': profile})
